@@ -14,8 +14,9 @@ function PropertyCard({ property }) {
   return (
     <div className="card">
       <div className="card-image">
-        <span className="card-icon">{icons[p.type]}</span>
-        <span className="badge">For {p.mode === 'Buy' ? 'sale' : 'rent'}</span>
+        {/* <span className="card-icon">{icons[p.type]}</span> */}
+      <img src={icons[p.type]} alt={p.title} />
+      <span className="badge">For {p.mode === 'Buy' ? 'sale' : 'rent'}</span>
       </div>
       <div className="card-body">
         <p className="card-meta">{p.type} in {p.area}</p>
