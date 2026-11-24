@@ -1,0 +1,143 @@
+/* ---------- Basics ---------- */
+:root {
+  --green: #0f4c52;
+  --gold: #f0a92b;
+  --text: #12262b;
+  --grey: #52666b;
+  --border: #d5dedc;
+  --background: #f2f5f4;
+  --white: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--background);
+  line-height: 1.5;
+}
+
+h1, h2, h3 { font-family: Georgia, serif; margin: 0 0 12px; line-height: 1.2; }
+h1 { font-size: 48px; }
+h2 { font-size: 34px; }
+h3 { font-size: 20px; }
+p { margin: 0 0 14px; }
+a { color: var(--green); }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+/* ---------- Buttons ---------- */
+.button {
+  display: inline-block;
+  background: var(--green);
+  color: var(--white);
+  border: 2px solid var(--green);
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.button-outline { background: transparent; color: var(--green); }
+.button-full { display: block; text-align: center; margin: 18px 0 0; background: var(--gold); border-color: var(--gold); color: #1a1203; }
+
+.link-button {
+  background: none; border: none; color: var(--green);
+  text-decoration: underline; cursor: pointer; font-size: 15px; padding: 0; margin-top: 12px;
+}
+
+/* ---------- Navbar ---------- */
+.navbar { position: sticky; top: 0; z-index: 10; background: var(--white); border-bottom: 1px solid var(--border); }
+.navbar-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.logo { font-family: Georgia, serif; font-size: 22px; font-weight: bold; text-decoration: none; color: var(--text); }
+.nav-links a { margin: 0 12px; text-decoration: none; color: var(--grey); }
+.navbar .button { margin-right: 0; padding: 8px 16px; font-size: 14px; }
+
+/* ---------- Hero ---------- */
+.hero { padding: 70px 0; }
+.hero-inner { display: grid; grid-template-columns: 3fr 2fr; gap: 40px; align-items: center; }
+.hero p { font-size: 18px; color: var(--grey); margin-bottom: 24px; }
+
+.search-box { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 22px; }
+.search-box label { display: block; margin: 14px 0 4px; font-size: 14px; color: var(--grey); }
+
+.toggle { display: flex; gap: 6px; background: var(--background); padding: 5px; border-radius: 8px; }
+.toggle button { flex: 1; border: none; background: none; padding: 9px; border-radius: 6px; font-size: 15px; cursor: pointer; color: var(--grey); }
+.toggle button.active { background: var(--green); color: var(--white); }
+
+/* ---------- Sections ---------- */
+.section { padding: 64px 0; }
+.section-white { background: var(--white); }
+.section-dark { background: var(--green); color: var(--white); }
+.section-intro { color: var(--grey); max-width: 600px; margin-bottom: 32px; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+
+/* ---------- Services ---------- */
+.service { border-top: 3px solid var(--green); padding-top: 14px; }
+.service p { color: var(--grey); }
+
+/* ---------- Property filters ---------- */
+.pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+.pill { background: var(--white); border: 1px solid var(--border); border-radius: 20px; padding: 8px 16px; font-size: 14px; cursor: pointer; color: var(--grey); }
+.pill.active { background: var(--green); border-color: var(--green); color: var(--white); }
+
+/* ---------- Property cards ---------- */
+.card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-top: 24px; }
+.grid .card { margin-top: 0; }
+.properties-grid { margin-top: 24px; }
+.card-image { position: relative; height: 150px; background: linear-gradient(135deg, #2f6f8f, #5aa7a0); display: flex; align-items: center; justify-content: center; }
+.card-icon { font-size: 64px; }
+.badge { position: absolute; top: 12px; left: 12px; background: var(--gold); color: #1a1203; font-size: 12px; font-weight: bold; padding: 4px 10px; border-radius: 20px; }
+.card-body { padding: 18px; }
+.card-meta { color: var(--grey); font-size: 14px; margin-bottom: 8px; }
+.card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 12px; }
+.card-footer strong { font-size: 18px; }
+
+.empty { text-align: center; border: 2px dashed var(--border); border-radius: 12px; padding: 40px 20px; margin-top: 24px; }
+#properties .grid { margin-top: 24px; }
+
+/* ---------- Process ---------- */
+.section-dark h2 { margin-bottom: 32px; }
+.step-number { font-family: Georgia, serif; font-size: 40px; font-weight: bold; opacity: 0.6; }
+.step p { opacity: 0.85; }
+
+/* ---------- Reviews ---------- */
+.review { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 22px; }
+.review .stars { color: var(--gold); font-size: 20px; margin-bottom: 8px; }
+.review strong, .review span { display: block; }
+.review span { color: var(--grey); font-size: 14px; }
+.section .review p { margin-bottom: 16px; }
+#reviews h2 { margin-bottom: 32px; }
+
+/* ---------- Contact ---------- */
+.contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.form label { display: block; margin: 14px 0 4px; font-size: 14px; color: var(--grey); }
+.form input, .form select, .form textarea,
+.search-box select {
+  width: 100%; padding: 10px 12px; font-size: 15px; font-family: inherit;
+  border: 1px solid var(--border); border-radius: 8px; background: var(--background); color: var(--text);
+}
+.form .button { margin-top: 18px; }
+.thanks { border: 1px solid var(--border); border-radius: 12px; padding: 28px; align-self: start; }
+
+/* ---------- Footer ---------- */
+.footer { border-top: 1px solid var(--border); padding: 24px 0; color: var(--grey); font-size: 14px; }
+.footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+.footer p { margin: 0; }
+
+/* ---------- Phones and small screens ---------- */
+@media (max-width: 800px) {
+  h1 { font-size: 34px; }
+  h2 { font-size: 28px; }
+  .hero { padding: 40px 0; }
+  .hero-inner, .contact-inner { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+  .button { margin-bottom: 10px; }
+}
